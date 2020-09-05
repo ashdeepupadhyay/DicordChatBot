@@ -1,0 +1,14 @@
+{
+    "development":{
+        "mongoDbURL":"mongodb://localhost:27017/FirstDiscordBot",
+        "dicordLoginKey":"NzUwMzMwMTg0OTAwODA0NzI5.X049cA.t8dFcSwUI-e6QpJ2vFrcNO3LX44",
+        "newCustomSearchAPIKey":"AIzaSyDTwcNrRD-iDxQUrKo7b4rkNFSxeC4DChU",
+        "baseURL":"https://www.googleapis.com/customsearch/v1?key=",
+        "baseURLCX":"&cx=",
+        "searchEngineId":"7142410b0498d4c10"
+    },
+    "production":{
+        "mongoDbURL":"mongodb://localhost:27017/FirstDiscordBot",
+        "dicordLoginKey":"NzUwMzMwMTg0OTAwODA0NzI5.X049cA.t8dFcSwUI-e6QpJ2vFrcNO3LX44"
+    }
+}

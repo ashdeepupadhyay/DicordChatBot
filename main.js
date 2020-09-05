@@ -9,6 +9,10 @@ const client= new discord.Client();
 const prefixGoogle="!google";
 const prefixRecent= "!recent";
 
+const dotenv = require("dotenv").config();
+const env = dotenv.parsed.NODE_ENV || "development";
+const config = require("./config.json")[env];
+
 client.once('ready',()=>{
     console.log("First Dicord Bot is online");
 });
@@ -43,12 +47,12 @@ client.on('message',async message=>{
             console.log("after insert")
         }
 
-        var newCustomSearchAPIKey="AIzaSyDTwcNrRD-iDxQUrKo7b4rkNFSxeC4DChU"
-        var baseURL="https://www.googleapis.com/customsearch/v1?key="
-        var baseURLCX="&cx=";
-        var searchEngineId="7142410b0498d4c10";
+        // var newCustomSearchAPIKey="AIzaSyDTwcNrRD-iDxQUrKo7b4rkNFSxeC4DChU"
+        // var baseURL="https://www.googleapis.com/customsearch/v1?key="
+        // var baseURLCX="&cx=";
+        // var searchEngineId="7142410b0498d4c10";
         var query="&q="+command;
-        var search=baseURL+newCustomSearchAPIKey+baseURLCX+searchEngineId+query;
+        var search=config.baseURL+config.newCustomSearchAPIKey+config.baseURLCX+config.searchEngineId+query;
         console.log("search "+search);
         
         request(search, { json: true }, (err, res, body) => {
@@ -107,4 +111,4 @@ client.on('message',async message=>{
     }
 });
 
-client.login("NzUwMzMwMTg0OTAwODA0NzI5.X049cA.t8dFcSwUI-e6QpJ2vFrcNO3LX44");
+client.login(config.dicordLoginKey);

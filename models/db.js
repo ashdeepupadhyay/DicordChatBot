@@ -1,6 +1,9 @@
 const mongoose =require('mongoose');
+const dotenv = require("dotenv").config();
+const env = dotenv.parsed.NODE_ENV || "development";
+const config = require("./../config.json")[env];
 
-mongoose.connect("mongodb://localhost:27017/FirstDiscordBot",{useNewUrlParser:true,useFindAndModify: false,useUnifiedTopology: true
+mongoose.connect(config.mongoDbURL,{useNewUrlParser:true,useFindAndModify: false,useUnifiedTopology: true
 },(err)=>{
     if(!err){
         console.log('MongoDB Connection Succeeded');
