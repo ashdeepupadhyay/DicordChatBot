@@ -1,7 +1,7 @@
 require('./models/db');
 
 const discord=require("discord.js");
-
+const request = require('request');
 const mongoose =require('mongoose');
 
 const botUserSearch = mongoose.model('BotUserSearch');
@@ -42,6 +42,33 @@ client.on('message',async message=>{
             botuser.save();
             console.log("after insert")
         }
+
+        var newCustomSearchAPIKey="AIzaSyDTwcNrRD-iDxQUrKo7b4rkNFSxeC4DChU"
+        var baseURL="https://www.googleapis.com/customsearch/v1?key="
+        var baseURLCX="&cx=";
+        var searchEngineId="7142410b0498d4c10";
+        var query="&q="+command;
+        var search=baseURL+newCustomSearchAPIKey+baseURLCX+searchEngineId+query;
+        console.log("search "+search);
+        
+        request(search, { json: true }, (err, res, body) => {
+            if (err) { return console.log(err); }
+            console.log(body.url);
+            
+            console.log(body.items)
+            if(body.items)
+            {
+                console.log(body.items.length);
+                var searchItems=body.items;
+                for(var i=0;i<body.items.length;i++)
+                {
+                    message.channel.send( body.items[i].link);
+                    if(i==4)
+                    break;
+                }
+            }
+          });
+
     }
     else if(message.content.startsWith(prefixRecent)){//if it starts with !recent
         var args = message.content.slice(prefixGoogle.length);
