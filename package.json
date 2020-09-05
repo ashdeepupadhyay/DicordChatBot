@@ -1,0 +1,22 @@
+{
+  "name": "dicordchatbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashdeepupadhyay/DicordChatBot.git"
+  },
+  "author": "ashdeepupadhyay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashdeepupadhyay/DicordChatBot/issues"
+  },
+  "homepage": "https://github.com/ashdeepupadhyay/DicordChatBot#readme",
+  "dependencies": {
+    "discord.js": "^12.3.1"
+  }
+}
