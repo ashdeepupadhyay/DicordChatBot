@@ -1,5 +1,6 @@
 {
     "development":{
+        "mongoLabUrl":"mongodb+srv://admin:admin@cluster0.yb6on.mongodb.net/<sample_mflix>?retryWrites=true&w=majority",
         "mongoDbURL":"mongodb://localhost:27017/FirstDiscordBot",
         "dicordLoginKey":"NzUwMzMwMTg0OTAwODA0NzI5.X049cA.t8dFcSwUI-e6QpJ2vFrcNO3LX44",
         "newCustomSearchAPIKey":"AIzaSyDTwcNrRD-iDxQUrKo7b4rkNFSxeC4DChU",
