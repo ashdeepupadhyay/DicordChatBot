@@ -47,10 +47,6 @@ client.on('message',async message=>{
             console.log("after insert")
         }
 
-        // var newCustomSearchAPIKey="AIzaSyDTwcNrRD-iDxQUrKo7b4rkNFSxeC4DChU"
-        // var baseURL="https://www.googleapis.com/customsearch/v1?key="
-        // var baseURLCX="&cx=";
-        // var searchEngineId="7142410b0498d4c10";
         var query="&q="+command;
         var search=config.baseURL+config.newCustomSearchAPIKey+config.baseURLCX+config.searchEngineId+query;
         console.log("search "+search);
@@ -70,6 +66,9 @@ client.on('message',async message=>{
                     if(i==4)
                     break;
                 }
+            }
+            else{
+                message.channel.send("BOT: Oops!! NO data found for this keyword,Search another word");
             }
           });
 
