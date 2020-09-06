@@ -2,7 +2,7 @@
     "development":{
         "mongoLabUrl":"mongodb+srv://admin:admin@cluster0.yb6on.mongodb.net/<sample_mflix>?retryWrites=true&w=majority",
         "mongoDbURL":"mongodb://localhost:27017/FirstDiscordBot",
-        "discordLoginKey":"TnpVd016TXdNVGcwT1RBd09EQTBOekk1LlgwNDljQS50OGRGY1N3VUktZTZRcEoydkZyY05PM0xYNDQ=",
+        "discordLoginKey":"TnpVd016TXdNVGcwT1RBd09EQTBOekk1LlgwNDljQS5KaHVaZmxfZmZNVUJlVHFPcWVOS0V4WUF5TG8=",
         "newCustomSearchAPIKey":"AIzaSyDTwcNrRD-iDxQUrKo7b4rkNFSxeC4DChU",
         "baseURL":"https://www.googleapis.com/customsearch/v1?key=",
         "baseURLCX":"&cx=",
@@ -11,7 +11,7 @@
     "production":{
         "mongoLabUrl":"mongodb+srv://admin:admin@cluster0.yb6on.mongodb.net/<sample_mflix>?retryWrites=true&w=majority",
         "mongoDbURL":"mongodb://localhost:27017/FirstDiscordBot",
-        "dicordLoginKey":"TnpVd016TXdNVGcwT1RBd09EQTBOekk1LlgwNDljQS50OGRGY1N3VUktZTZRcEoydkZyY05PM0xYNDQ=",
+        "dicordLoginKey":"TnpVd016TXdNVGcwT1RBd09EQTBOekk1LlgwNDljQS5KaHVaZmxfZmZNVUJlVHFPcWVOS0V4WUF5TG8=",
         "newCustomSearchAPIKey":"AIzaSyDTwcNrRD-iDxQUrKo7b4rkNFSxeC4DChU",
         "baseURL":"https://www.googleapis.com/customsearch/v1?key=",
         "baseURLCX":"&cx=",
