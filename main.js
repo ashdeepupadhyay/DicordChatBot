@@ -109,5 +109,8 @@ client.on('message',async message=>{
         message.channel.send("hey");
     }
 });
+let encrypteddiscordLoginKeyLoginKey = config.discordLoginKey;
+let buff1 = new Buffer(encrypteddiscordLoginKeyLoginKey, 'base64');
+let decrypteddiscordLoginKeyLoginKey = buff1.toString('ascii');
 
-client.login(config.dicordLoginKey);
+client.login(decrypteddiscordLoginKeyLoginKey);
